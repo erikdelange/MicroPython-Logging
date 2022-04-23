@@ -1,0 +1,37 @@
+--- Logging Error ---
+TypeError("format string didn't convert all arguments",)
+Message: 'test message 1: %d(%s)'
+Arguments: (100, 'blah', 'more blah')
+Format String: '%(levelname)s:%(name)s:%(message)s'
+
+INFO:root:test message 2: 100(blah)
+
+--- Logging Error ---
+TypeError('format string needs more arguments',)
+Message: 'test message 3: %d(%s)'
+Arguments: (100,)
+Format String: '%(levelname)s:%(name)s:%(message)s'
+
+--- Logging Error ---
+TypeError('format string needs more arguments',)
+Message: 'test message 4: %d(%s)'
+Arguments: ()
+Format String: '%(levelname)s:%(name)s:%(message)s'
+
+DEBUG:root:debug output
+INFO:root:this is informational
+WARNING:root:this is a warning
+ERROR:root:this is an error
+CRITICAL:root:this is critical
+ERROR:root:oops this is an exception
+Traceback (most recent call last):
+  File "<stdin>", line 45, in <module>
+ZeroDivisionError: divide by zero
+
+--- Logging Error ---
+KeyError('unknown',)
+Message: 'test message'
+Arguments: ()
+Format String: '%(levelname)s %(unknown)s'
+
+2022-04-23 18:57:17:INFO   :another_logger:this message comes from a separate logger, note the name
