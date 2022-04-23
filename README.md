@@ -1,3 +1,3 @@
 # MicroPython logging module
 
-A small and simple implementation of Pythons *logging* module. Avoids having to use print() statements for logging and debugging in your code. Many MicroPython versions exist, this one is as much as possible stripped of ballast I don't use to reduce its size. See *demo.py* and the resulting demo_output.txt for its workings. To use copy *logging.py* to your device in your working directory or (better) somewhere in sys.path.
+A small and simple implementation of Pythons *logging* module. Avoids having to use print() statements in your code for logging and debugging. Many MicroPython versions exist, this one is as much as possible stripped of ballast I don't use to reduce its size. See *demo.py* and the resulting demo_output.txt for its workings. To use copy *logging.py* to your device in your working directory or (better) somewhere in sys.path.
