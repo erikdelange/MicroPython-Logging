@@ -34,7 +34,8 @@ class Logger:
             return
 
         try:
-            message = message % args
+            if args:
+                message = message % args
 
             record = dict()
             record["levelname"] = _level_str.get(level, str(level))
