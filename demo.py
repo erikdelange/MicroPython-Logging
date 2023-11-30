@@ -73,3 +73,12 @@ logger.info("this message comes from a separate logger, note the name")
 logging.basicConfig(filename="log.txt", filemode='w')
 
 logging.critical("last message")
+
+# log time in milli-seconds since initialization of logger
+#
+print()
+
+logging.basicConfig(format="%(chrono)s:%(levelname)-7s:%(name)s:%(message)s")
+
+logging.info("first chrono message")
+logging.info("second chrono message")

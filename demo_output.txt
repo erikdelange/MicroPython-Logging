@@ -35,3 +35,6 @@ Arguments: ()
 Format String: '%(levelname)s %(unknown)s'
 
 2022-04-23 18:57:17:INFO   :another_logger:this message comes from a separate logger, note the name
+
+0.124000:INFO   :root:first chrono message
+0.127000:INFO   :root:second chrono message
