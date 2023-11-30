@@ -28,6 +28,7 @@ class Logger:
     def __init__(self, name):
         self.name = name
         self.level = _level
+        self.start_ms = time.ticks_ms()
 
     def log(self, level, message, *args):
         if level < self.level:
@@ -45,6 +46,7 @@ class Logger:
             tm = time.localtime()
             record["asctime"] = "{:04d}-{:02d}-{:02d} {:02d}:{:02d}:{:02d}" \
                 .format(tm[0], tm[1], tm[2], tm[3], tm[4], tm[5])
+            record["chrono"] = "{:f}".format(time.ticks_diff(time.ticks_ms(),self.start_ms)/1000)
 
             log_str = _format % record + "\n"
 
